@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This is a script that displays numbers 1-20 but the 4th 9th and 17th iteration display different things
+
+minutes=1
+hours=0
+while [ $hours -lt 13 ]; do
+    echo Hour: $hours
+    while [ $minutes -lt 60 ]; do
+        echo $minutes
+        (( minutes+=1 ))
+    done
+    (( minutes=1 ))
+    (( hours+=1 ))
+done
