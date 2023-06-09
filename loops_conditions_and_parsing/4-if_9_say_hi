@@ -1,7 +1,12 @@
-#!/usr/bin/env bash 
-# This script is displaying "Best school" 10 times with the until loop command
-count=0
-until [ $count -eq 10 ]; do
-     echo "Best School"
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times with a 9th iteration hi with the while loop command
+count=1
+while [ $count -le 10 ]; do
+     if [ $count -eq 9 ]; then
+         echo "Best School"
+         echo "Hi"
+     else
+          echo "Best School"
+     fi
      count=$((count + 1))
 done
