@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This is a script that displays the contents of a current directory in a list format where only the name after the dash is displayed
+for file in *; do
+  if [[ -f "$file" && ! "$file" == .* ]]; then
+    filename=$(echo "$file" | cut -d '-' -f2-)
+    echo "$filename"
+  fi
+done
